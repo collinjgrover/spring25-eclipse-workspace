@@ -1,0 +1,105 @@
+!SESSION 2025-01-29 11:25:16.725 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=22.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product -data /home/cj/eclipse-workspace-132-spring
+
+!ENTRY ch.qos.logback.classic 1 0 2025-01-29 11:25:19.562
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-01-29 11:25:21.004
+!MESSAGE Logback config file: /home/cj/eclipse-workspace-132-spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 4 0 2025-01-29 11:25:25.969
+!MESSAGE The org.eclipse.ui.IStartup extension from 'edu.umd.cs.eclipse.courseProjectManager' does not provide a valid 'startup' element.
+!SESSION 2025-01-29 11:26:19.963 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=22.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product -data /home/cj/eclipse-workspace-132-spring
+
+!ENTRY ch.qos.logback.classic 1 0 2025-01-29 11:26:22.822
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-01-29 11:26:24.147
+!MESSAGE Logback config file: /home/cj/eclipse-workspace-132-spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 4 0 2025-01-29 11:26:27.320
+!MESSAGE The org.eclipse.ui.IStartup extension from 'edu.umd.cs.eclipse.courseProjectManager' does not provide a valid 'startup' element.
+!SESSION 2025-01-31 10:25:51.091 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=22.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product -data /home/cj/eclipse-workspace-132-spring
+
+!ENTRY ch.qos.logback.classic 1 0 2025-01-31 10:25:54.320
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-01-31 10:25:55.862
+!MESSAGE Logback config file: /home/cj/eclipse-workspace-132-spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 4 0 2025-01-31 10:26:01.017
+!MESSAGE The org.eclipse.ui.IStartup extension from 'edu.umd.cs.eclipse.courseProjectManager' does not provide a valid 'startup' element.
+!SESSION 2025-02-03 11:11:45.169 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=22.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-02-03 11:11:48.928
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-02-03 11:11:49.805
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-02-03 11:11:50.447
+!MESSAGE Logback config file: /home/cj/eclipse-workspace-132-spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 4 0 2025-02-03 11:11:55.887
+!MESSAGE The org.eclipse.ui.IStartup extension from 'edu.umd.cs.eclipse.courseProjectManager' does not provide a valid 'startup' element.
+!SESSION 2025-02-04 12:52:04.519 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=22.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-02-04 12:52:08.694
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-02-04 12:52:09.544
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-02-04 12:52:10.060
+!MESSAGE Logback config file: /home/cj/eclipse-workspace-132-spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 4 0 2025-02-04 12:52:14.232
+!MESSAGE The org.eclipse.ui.IStartup extension from 'edu.umd.cs.eclipse.courseProjectManager' does not provide a valid 'startup' element.
+!SESSION 2025-02-04 13:07:16.662 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=22.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-02-04 13:07:19.869
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-02-04 13:07:20.659
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-02-04 13:07:21.199
+!MESSAGE Logback config file: /home/cj/eclipse-workspace-132-spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 4 0 2025-02-04 13:07:26.463
+!MESSAGE The org.eclipse.ui.IStartup extension from 'edu.umd.cs.eclipse.courseProjectManager' does not provide a valid 'startup' element.
