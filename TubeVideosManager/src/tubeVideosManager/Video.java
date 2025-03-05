@@ -1,3 +1,11 @@
+/*
+ * Name: Collin Grover
+ * UID: 121312136
+ * UMD CMSC 132 - Project #1, 2/5
+ * Video.java represents a video with a title, URL, duration, and an enumerated
+ * type of Genre. It stores user comments in an ArrayList, of which comments can 
+ * be added. All inputs are ensured to be valid before any processing is done.
+ */
 package tubeVideosManager;
 
 import java.util.ArrayList;
@@ -36,6 +44,7 @@ public class Video implements Comparable<Video> {
 			this.url = new String(url);
 			this.durationInMinutes = durationInMinutes;
 			this.videoGenre = videoGenre;
+			comments = new ArrayList<>();
 		} else {
 			throw new IllegalArgumentException("Invalid parameter(s)");
 		}
@@ -49,9 +58,7 @@ public class Video implements Comparable<Video> {
 	 * @param video
 	 */
 	public Video(Video video) {
-//		if (video != null) { // could this be null?
 		this(video.title, video.url, video.durationInMinutes, video.videoGenre);
-//		}
 	}
 
 	/**
@@ -117,10 +124,10 @@ public class Video implements Comparable<Video> {
 	public boolean addComments(String comments) {
 		boolean out = false;
 		if (isValidStr(comments)) {
-			this.comments.add(comments);
+			(this.comments).add(comments);
 			out = true;
 		}
-		return false;
+		return out;
 	}
 
 	/**

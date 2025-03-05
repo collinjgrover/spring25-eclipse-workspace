@@ -1,2 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.w3c.dom.html.HTMLTitleElement"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="tubeVideosManager.Video"/>
+    <fullyQualifiedTypeName name="tubeVideosManager.Playlist"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.standard.QueuedJobCount"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="tubeVideosManager.Genre"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="model.Utilities"/>
+    <fullyQualifiedTypeName name="java.util.Currency"/>
+    <fullyQualifiedTypeName name="javax.swing.text.html.parser.TagElement"/>
+    <fullyQualifiedTypeName name="java.lang.classfile.instruction.ReturnInstruction"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.standard.MediaSize.Other"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="model.ImageElement"/>
+    <fullyQualifiedTypeName name="model.Element"/>
+    <fullyQualifiedTypeName name="model.TagElement"/>
+    <fullyQualifiedTypeName name="model.ListElement"/>
+    <fullyQualifiedTypeName name="model.TextElement"/>
+    <fullyQualifiedTypeName name="javax.swing.text.AbstractDocument.Content"/>
+    <fullyQualifiedTypeName name="java.lang.classfile.Superclass"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

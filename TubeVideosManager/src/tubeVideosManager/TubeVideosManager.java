@@ -1,3 +1,8 @@
+/*
+ * Name: Collin Grover
+ * UID: 121312136
+ * UMD CMSC 132 - Project #1, 2/5
+ */
 package tubeVideosManager;
 
 import java.io.*;
@@ -109,8 +114,10 @@ public class TubeVideosManager implements TubeVideosManagerInt {
 		boolean out = false;
 		if (isValidStr(title) && isValidStr(comments)) {
 			Video vidToModify = findVideo(title);
+			if (vidToModify != null) { // ensures that video with title does exist
 			vidToModify.addComments(comments);
 			out = true;
+			}
 		}
 		return out;
 	}
@@ -124,7 +131,17 @@ public class TubeVideosManager implements TubeVideosManagerInt {
 	 * @return true if playlist has been added; false otherwise
 	 */
 	public boolean addPlaylist(String playlistName) {
-		throw new UnsupportedOperationException("Implement this method");
+		if (isValidStr(playlistName)) {
+			  for (Playlist currPlaylist : playlists) {
+			        if (currPlaylist.getName().equals(playlistName)) {
+			            return false; 
+			        }
+			    } 
+			    playlists.add(new Playlist(playlistName));
+			    return true;
+		} else {
+			throw new IllegalArgumentException("Invalid parameter(s)");
+		}
 	}
 
 	/**
@@ -134,7 +151,11 @@ public class TubeVideosManager implements TubeVideosManagerInt {
 	 * @return Array of String references.
 	 */
 	public String[] getPlaylistsNames() {
-		throw new UnsupportedOperationException("Implement this method");
+		String[] out = new String[playlists.size()];
+		for (int i = 0; i < out.length; i++) {
+			out[i] = playlists.get(i).getName();
+		}
+		return out;
 	}
 
 	/**
@@ -144,7 +165,17 @@ public class TubeVideosManager implements TubeVideosManagerInt {
 	 * @return true if the title is added to the playlist; false otherwise
 	 */
 	public boolean addVideoToPlaylist(String title, String playlistName) {
-		throw new UnsupportedOperationException("Implement this method");
+		boolean out = false;
+		if (isValidStr(playlistName)) {
+			Playlist currPlaylist = findPlayListInternal(playlistName);
+			if (currPlaylist != null) { // ensures playlistName does exist
+			currPlaylist.addToPlaylist(title);
+			out = true;
+			}
+		} else {
+			throw new IllegalArgumentException("Invalid parameter(s)");
+		}
+		return out;
 	}
 
 	/**
@@ -157,7 +188,19 @@ public class TubeVideosManager implements TubeVideosManagerInt {
 	 * @return Reference to playlist or null
 	 */
 	public Playlist getPlaylist(String playlistName) {
-		throw new UnsupportedOperationException("Implement this method");
+		Playlist outPlaylist = null;
+		if (isValidStr(playlistName)) {
+			// iterate thru playlists and check the name that matches
+			// playlistName
+			for (Playlist currPlaylist : playlists) {
+				if (currPlaylist.getName().equals(playlistName)) {
+					outPlaylist = currPlaylist;
+				}
+			}
+		} else {
+			throw new IllegalArgumentException("Invalid parameter(s)");
+		}
+		return outPlaylist;
 	}
 
 	/**
@@ -179,7 +222,28 @@ public class TubeVideosManager implements TubeVideosManagerInt {
 	 */
 	public Playlist searchForVideos(String playlistName, String title,
 			int maximumDurationInMinutes, Genre genre) {
-		throw new UnsupportedOperationException("Implement this method");
+		Playlist out = null;
+		if (isValidStr(playlistName) && isValidStr(title)) {
+			out = new Playlist(playlistName);
+			// sort thru and add videos that match all valid parameters input
+			for (Video currVideo : videoDatabase) {
+				boolean isMatch = true; // assumes all videos are matches until
+										// parameters are reviewed
+				if (title != null && !currVideo.getTitle().equals(title))
+					isMatch = false;
+
+				if (maximumDurationInMinutes > 0 && currVideo
+						.getDurationInMinutes() > maximumDurationInMinutes)
+					isMatch = false;
+
+				if (genre != null && currVideo.getGenre() != genre)
+					isMatch = false;
+
+				if (isMatch)
+					out.addToPlaylist(currVideo.getTitle());
+			}
+		}
+		return out;
 	}
 
 	/**
@@ -314,12 +378,17 @@ public class TubeVideosManager implements TubeVideosManagerInt {
 	 * implement and use this method.
 	 */
 	private Playlist findPlayListInternal(String playlistName) {
-		if (playlistName == null || playlistName.isBlank()) {
+		if (!isValidStr(playlistName)) {
 			throw new IllegalArgumentException(
 					"TubeVideosManager findPlaylistInternal: Invalid parameter(s)");
 		}
-		throw new UnsupportedOperationException(
-				"Complete this method after removing this line");
+		Playlist outPlaylist = null;
+		for (Playlist currPlaylist : playlists) {
+			if (currPlaylist.getName().equals(playlistName)) {
+				outPlaylist = currPlaylist;
+			}
+		}
+		return outPlaylist;
 	}
 
 	/*
@@ -353,7 +422,7 @@ public class TubeVideosManager implements TubeVideosManagerInt {
 	 * Writes a string to a file
 	 */
 	private static boolean writeStringToFile(String filename, String data) {
-		try {
+		try { 
 			FileWriter output = new FileWriter(filename);
 			output.write(data);
 			output.close();
@@ -366,11 +435,9 @@ public class TubeVideosManager implements TubeVideosManagerInt {
 	}
 
 	/*
-	 * private helper method(s)
+	 * ensures the string input is valid in the sense that it is not a null
+	 * reference and is not blank
 	 */
-
-	// ensures the string input is valid in the senes that it is not a null
-	// reference and is not blank
 	private boolean isValidStr(String inputStr) {
 		return (inputStr != null && !inputStr.isBlank());
 	}

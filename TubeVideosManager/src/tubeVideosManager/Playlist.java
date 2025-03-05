@@ -1,8 +1,22 @@
+/*
+ * Name: Collin Grover
+ * UID: 121312136
+ * UMD CMSC 132 - Project #1, 2/5
+ * The Playlist class represents a collection of video titles with a specified 
+ * 
+. It allows for various operations upon the list such as adding and
+ * removing video titles. Playlist.java also includes a shuffle method to randomize 
+ * the order of titles. All inputs are ensured to be valid before any processing
+ * takes place. 
+ */
 package tubeVideosManager;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Queue;
 import java.util.Random;
+
+import javax.print.attribute.standard.QueuedJobCount;
 
 /**
  * A playlist keeps tracks of titles and it has a name. An ArrayList of string
@@ -80,8 +94,8 @@ public class Playlist {
 	public boolean addToPlaylist(String videoTitle) {
 		boolean out = false;
 		if (isValidStr(videoTitle)) {
-		
-			
+			videoTitles.add(new String(videoTitle));
+			out = true;
 		} else {
 			throw new IllegalArgumentException("Invalid paramater(s)");
 		}
@@ -94,7 +108,11 @@ public class Playlist {
 	 * @return ArrayList with titles
 	 */
 	public ArrayList<String> getPlaylistVideosTitles() {
-		throw new UnsupportedOperationException("Implement this method");
+		ArrayList<String> out = new ArrayList<>();
+		for (String currString : videoTitles) {
+			out.add(new String(currString)); // avoiding privacy leaks
+		}
+		return out;
 	}
 
 	/**
@@ -109,7 +127,11 @@ public class Playlist {
 	 * 
 	 */
 	public boolean removeFromPlaylistAll(String videoTitle) {
-		throw new UnsupportedOperationException("Implement this method");
+		boolean out = false;
+		if (isValidStr(videoTitle)) {
+				out = videoTitles.remove(videoTitle);
+		}
+		return out;
 	}
 
 	/**
@@ -120,22 +142,32 @@ public class Playlist {
 	 * @param random
 	 */
 	public void shuffleVideoTitles(Random random) {
-		throw new UnsupportedOperationException("Implement this method");
+		if (random == null) {
+			Collections.shuffle(videoTitles);
+		} else {
+			Collections.shuffle(videoTitles, random);
+		}
 	}
 
 	/*
 	 * private helper method(s)
 	 */
 
-	// ensures the string input is valid in the senes that it is not a null
-	// reference and is not blank
+	/*
+	 * ensures the string input is valid in the sense that it is not a null
+	 * reference and is not blank
+	 */
 	private boolean isValidStr(String inputStr) {
 		return (inputStr != null && !inputStr.isBlank());
 	}
-	
-	private ArrayList<String> copyPlayList (ArrayList<String> in) {
+
+	/*
+	 * returns a copy of the input ArrayList representing a playlist ensuring no
+	 * data leaks take place
+	 */
+	private ArrayList<String> copyPlayList(ArrayList<String> in) {
 		ArrayList<String> out = new ArrayList<String>();
-		for (String currString : videoTitles) {
+		for (String currString : in) {
 			out.add(new String(currString));
 		}
 		return out;
