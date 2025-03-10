@@ -27,4 +27,6 @@
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="game.Polygon"/>
+    <fullyQualifiedTypeName name="game.Entity"/>
 </qualifiedTypeNameHistroy>

@@ -1,13 +1,19 @@
 package game;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
 
-public class Triangle extends Polygon {
+public class Entity extends Polygon{
+	
+	private int hp;
+	private int damageOutput;
 
-	public Triangle(Point[] inShape, Point inPosition, double inRotation) {
+	public Entity(Point[] inShape, Point inPosition, double inRotation) {
 		super(inShape, inPosition, inRotation);
+		hp = 100;
+		damageOutput = 0; // will be set in subclasses
 	}
-
+	
 	/*
 	 * change the position of your element if the forward key is being held and
 	 * change the rotation of the element if either of the turn keys are being
@@ -45,12 +51,16 @@ public class Triangle extends Polygon {
 //		}
 //		
 //		// move left
-		if (currX - xMove > 0.00) {
+		if (canMoveLeft() && currX - xMove > 0.00) {
 			position.x -= xMove;
 			rotation = 180.00;
 		}
 		
-		
+	}
+	
+	private boolean canMoveLeft() {
+		// must implement after wall constructs are implemented
+		return true;
 	}
 
 	public void paint(Graphics brush) {
@@ -66,7 +76,7 @@ public class Triangle extends Polygon {
 	private int[][] dividePoints(Point[] points) {
 		int[] xPoints = null;
 		int[] yPoints = null;
- 
+
 		xPoints = new int[points.length];
 		yPoints = new int[points.length];
 
@@ -78,4 +88,21 @@ public class Triangle extends Polygon {
 
 		return out;
 	}
+	
+	public void setHP(int hp) {
+		this.hp = hp;
+	}
+	
+	public void setDamageOutput(int damage) {
+		damageOutput = damage;
+	}
+	
+	public int getDamageOutput() {
+		return damageOutput;
+	}
+	
+	public int getHp () {
+		return hp;
+	}
+	
 }

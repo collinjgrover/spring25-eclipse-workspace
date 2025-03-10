@@ -78,6 +78,7 @@ class Polygon {
 
 	public void rotate(int degrees) {
 		rotation = (rotation + degrees) % 360;
+		
 	}
 
 	/*
